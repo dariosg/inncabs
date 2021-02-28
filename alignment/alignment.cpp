@@ -22,6 +22,7 @@ int main(int argc, char** argv) {
 			return pairalign(l);
 		},
 		[](int result) {
+			(void)result;
 			return align_verify(); 
 		},
 		name,

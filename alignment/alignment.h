@@ -104,11 +104,12 @@ int get_matrix(int *matptr, int *xref, int scale) {
 	min = matrix[0][0]; 
 	max = matrix[0][0];
 
-	for (i = 0; i <= max_aa; i++)
+	for (i = 0; i <= max_aa; i++)  {
 		for (j = 1; j <= i;      j++) {
 			if (matrix[i][j] < min) min = matrix[i][j];
 			if (matrix[i][j] > max) max = matrix[i][j];
 		}
+	}
 
 		for (i = 0; i < gap_pos1; i++) {
 			matrix[i][gap_pos1] = gr_score;

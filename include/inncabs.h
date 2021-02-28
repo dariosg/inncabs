@@ -145,12 +145,16 @@ namespace inncabs {
 	void message(const std::string& msg) {
 		#ifdef INNCABS_MSG
 		std::cout << msg;
+#else
+		(void)msg;
 		#endif
 	}
 
 	void debug(const std::string& msg) {
 		#ifdef INNCABS_DEBUG
 		std::cout << msg;
+#else
+		(void)msg;
 		#endif
 	}
 

@@ -57,7 +57,7 @@ void encode(char *seq, char *naseq, int l) {
 	char c;
 	const char *t;
 
-	for (i = 1; i <= l; i++)
+	for (i = 1; i <= l; i++){
 		if (seq[i] == '-') {
 			naseq[i] = (char) gap_pos2;
 		} else {
@@ -67,6 +67,7 @@ void encode(char *seq, char *naseq, int l) {
 			naseq[i] = -1;
 			while (t[j]) {if (t[j] == c) {naseq[i] = (char) j; break;} j++;}
 		}
+	}
 
 		naseq[l + 1] = -3;
 }
